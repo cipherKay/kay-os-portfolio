@@ -29,3 +29,7 @@ Added a standalone case study and interactive newsletter demo: separately stored
 
 ## v4.1 window positioning fixes
 All app windows open centered and remain inside the viewport; dragging is clamped to the visible desktop; maximize/restore and browser resize preserve reachable title bars. Project Explorer and Recognition App receive larger default widths.
+
+
+## v4.2 navigation repair
+Restores click handlers for Explore in KAY OS, all View project buttons, desktop shortcuts, Project Explorer case-study links, Start menu, and Back to portfolio. Supports the legacy #/projects URL.
