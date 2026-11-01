@@ -98,8 +98,12 @@ function enableDrag(win,handle){
 }
 window.addEventListener('resize',()=>area.querySelectorAll('.window').forEach(win=>fitWindow(win)));
 
+// Local-only sample data for the Device Ordering demo. Never sends real requests.
+const statuses=['Submitted','Approved','Ordered','Shipped','Delivered','Cancelled'];
+const sampleOrders=[{id:1001,requester:'Jordan Lee',device:'Laptop',status:'Submitted'}];
+let nextOrder=1002;
 function renderOrders(win){const tbody=win.querySelector('[data-order-rows]');if(!tbody)return;tbody.replaceChildren();sampleOrders.forEach(order=>{const tr=document.createElement('tr');[order.id,order.requester,order.device].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td)});const td=document.createElement('td');const select=document.createElement('select');select.setAttribute('aria-label','Status for order '+order.id);select.dataset.orderId=order.id;statuses.forEach(st=>{const option=document.createElement('option');option.value=st;option.textContent=st;option.selected=st===order.status;select.append(option)});td.append(select);tr.append(td);tbody.append(tr)})}
-document.addEventListener('submit',e=>{if(e.target.id!=='device-order-form')return;e.preventDefault();const win=e.target.closest('.window');const form=new FormData(e.target);sampleOrders.push({id:nextOrder++,requester:String(form.get('requester')).trim(),device:String(form.get('device')),status:'Submitted'});renderOrders(win);e.target.reset();win.querySelector('[data-notification-preview]').textContent='New fictional request added to the tracking list. Change its status to preview a client notification.'});
+document.addEventListener('submit',e=>{if(e.target.id!=='device-order-form')return;e.preventDefault();const win=e.target.closest('.window');const form=new FormData(e.target);const requester=String(form.get('requester')||'').trim();if(!requester){e.target.reportValidity();return;}sampleOrders.push({id:nextOrder++,requester,device:String(form.get('device')),status:'Submitted'});renderOrders(win);e.target.reset();win.querySelector('[data-notification-preview]').textContent='Request added successfully to the demo tracking list. Change its status to preview a client notification.'});
 document.addEventListener('change',e=>{const select=e.target.closest('[data-order-id]');if(!select)return;const order=sampleOrders.find(x=>x.id===Number(select.dataset.orderId));if(!order)return;order.status=select.value;const win=select.closest('.window');win.querySelector('[data-notification-preview]').textContent=`To: ${order.requester} (demo requester) | Subject: Device request #${order.id} update | Your ${order.device.toLowerCase()} request status is now: ${order.status}. This is a preview; no message was sent.`});
 
 
