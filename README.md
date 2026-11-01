@@ -1,3 +1,9 @@
+## KAY OS v5.4 — Mission-X launch repair
+
+Fixed the missing Mission-X JavaScript reference in `index.html`, restored valid mobile stylesheet paths, and preserved the interactive newspaper cipher and existing portfolio apps.
+
+Deploy the **contents** of this folder to the repository root. Use a hard refresh after deployment. The game uses only fictional, educational systems.
+
 ## v4.8 mobile layout refinement
 
 Compact mobile shortcuts, shorter labels, three-up KPI cards, reduced taskbar height, and preserved desktop layout. Verify on real devices after deployment.
