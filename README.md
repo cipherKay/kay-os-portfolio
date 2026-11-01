@@ -33,3 +33,7 @@ All app windows open centered and remain inside the viewport; dragging is clampe
 
 ## v4.2 navigation repair
 Restores click handlers for Explore in KAY OS, all View project buttons, desktop shortcuts, Project Explorer case-study links, Start menu, and Back to portfolio. Supports the legacy #/projects URL.
+
+
+## v4.3 Window layer fix
+All application windows now render in a dedicated fixed viewport layer (`#window-area`), outside desktop grid placement. `css/window-layer-v4.3.css` overrides legacy positioning rules. Project Explorer and other app windows are centered, bounded, and draggable. Homepage project count updated to 9.
