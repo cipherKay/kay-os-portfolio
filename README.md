@@ -46,3 +46,11 @@ All application windows now render in a dedicated fixed viewport layer (`#window
 ## v4.5 — Security Lab
 
 Replaced the static Security Lab demo with a fictional SOC tabletop: evidence timeline, triage acknowledgement, containment recommendation, report generation, and copy action. The case uses a reserved example IP and example.test address; no live systems or external services.
+
+
+## v4.6 — Mobile responsive layout
+- Mobile/tablet viewport app windows with accessible title bars and scrollable content.
+- Touch-friendly controls; dragging is intentionally disabled on narrow screens.
+- Responsive desktop shortcuts, taskbar, Project Explorer, Recognition App, Security Lab, and demo grids.
+- Added `css/mobile-v4.6.css`, loaded last to override older window positioning styles.
+- Verify on physical phones and tablets before production use.
