@@ -24,3 +24,12 @@ Upload **the contents** of this folder to the root of `cipherKay/kay-os-portfoli
 - Select a project to read challenge, implementation, outcome, and tech stack.
 - Open a separate detailed case-study window.
 - Public-safe summaries only; no internal organizational data.
+
+
+## v3.2 Project Explorer repair
+- Fixed missing stylesheet reference to `css/desktop-v3.css`.
+- Added `css/explorer-v3.2.css` for responsive, two-column Project Explorer.
+- Project Explorer opens centered and scrolls within the window; other app windows remain draggable.
+- Cache-busted CSS and JS references for GitHub Pages.
+
+Upload **all extracted files and folders** to the repository root. GitHub Pages should publish from the `main` branch root.
