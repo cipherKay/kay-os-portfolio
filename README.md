@@ -1,15 +1,19 @@
-# KAY OS — Cybersecurity & Development Portfolio
+# KAY OS v3 — Portfolio + Interactive Desktop
 
-A recruiter-friendly homepage with an interactive desktop experience.
+Static HTML/CSS/JavaScript website. Recruiter-friendly homepage plus KAY OS workspace.
 
-## Deploy on GitHub Pages
-1. Upload the **contents** of this folder to the root of `cipherKay/kay-os-portfolio`.
-2. In GitHub, go to Settings → Pages → Deploy from a branch → `main` → `/(root)`.
-3. Visit https://cipherkay.github.io/kay-os-portfolio/ after deployment.
+## GitHub Pages
+Upload **the contents** of this folder to the root of `cipherKay/kay-os-portfolio`. Under Settings → Pages, choose Deploy from branch, `main`, `/(root)`.
 
 ## Files
-- `index.html` — homepage and desktop structure
-- `css/style.css` — all styling
-- `js/main.js` — interactive apps, window management, taskbar
+- `index.html` — homepage and desktop markup, with **embedded critical desktop CSS** to prevent missing/stale desktop styling
+- `css/style.css` — base portfolio styling
+- `css/desktop-v3.css` — separately readable source of the embedded desktop CSS
+- `js/main.js` — application windows, taskbar, launch controls
+- `.nojekyll` — GitHub Pages static-site marker
 
-No build tools required. Case studies are summaries and do not include confidential employer data.
+## Notes
+- The desktop stylesheet is embedded in index.html so the desktop layout is not dependent on an additional CSS fetch.
+- No proprietary code or employer records are included.
+- Project windows are case-study summaries, not full software replicas.
+- Test homepage, Launch KAY OS, each app, Back to portfolio, and mobile layout after publishing.
