@@ -22,3 +22,10 @@ Approved public recognition submissions appear as polished cards on the Overview
 
 ## v3.9 layout update
 Larger responsive application windows, maximize/restore buttons, independent content scrolling, and improved Recognition App dashboard spacing. All demos use fictional data.
+
+## v4.0 — SharePoint Newsletter Library
+Added a standalone case study and interactive newsletter demo: separately stored pages, seamless combined reader, and fictional page-level engagement chart. No private SharePoint data or actual PDF documents are included.
+
+
+## v4.1 window positioning fixes
+All app windows open centered and remain inside the viewport; dragging is clamped to the visible desktop; maximize/restore and browser resize preserve reachable title bars. Project Explorer and Recognition App receive larger default widths.
