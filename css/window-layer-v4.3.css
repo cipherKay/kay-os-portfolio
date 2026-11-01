@@ -1,0 +1,6 @@
+/* KAY OS v4.3 — single viewport coordinate system for all application windows.
+   Window layer is not a grid item and does not scroll with desktop content. */
+#os #window-area{position:fixed;inset:0;z-index:35;pointer-events:none;overflow:hidden;isolation:isolate;}
+#os #window-area>.window[data-window]{position:absolute!important;pointer-events:auto;inset:auto auto auto auto;max-height:none;min-width:0;box-sizing:border-box;}
+#os #window-area>.window[data-window].is-maximized{max-height:none;}
+@media(max-width:850px){#os #window-area>.window[data-window]{position:absolute!important;}}
