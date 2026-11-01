@@ -1,6 +1,10 @@
-## KAY OS v5.4 — Mission-X launch repair
+# KAY OS v5.6 — Project Cipher
 
-Fixed the missing Mission-X JavaScript reference in `index.html`, restored valid mobile stylesheet paths, and preserved the interactive newspaper cipher and existing portfolio apps.
+The retro spy adventure is now called **Project Cipher** throughout the portfolio, including game menus, source identifiers, stylesheets, and documentation.
+
+## KAY OS v5.4 — Project Cipher launch repair
+
+Fixed the missing Project Cipher JavaScript reference in `index.html`, restored valid mobile stylesheet paths, and preserved the interactive newspaper cipher and existing portfolio apps.
 
 Deploy the **contents** of this folder to the repository root. Use a hard refresh after deployment. The game uses only fictional, educational systems.
 
@@ -89,16 +93,16 @@ Replaced the static Security Lab demo with a fictional SOC tabletop: evidence ti
 - Added `css/mobile-explorer-v5.css` and updated `js/main.js`. Desktop project explorer remains two-column.
 - Browser/device interaction testing is still required after publishing.
 
-## Mission-X (v5.1)
+## Project Cipher (v5.1)
 A 10-stage, fictional, local-only space research spy puzzle game. Launch from KAY OS desktop, Apps menu, or Quick Launch. Covers ROT13, HTML, networking, cloud transport, forensic imaging, Python, OSINT, binary, read-only SQL, and simulated steganography. No real NASA/JPL infrastructure is accessed. All game state resets on reopening.
 
 
-## v5.2 Mission-X pixel adventure
+## v5.2 Project Cipher pixel adventure
 Original top-down pixel-art facility map with ten numbered terminals, arrow/WASD and touch-pad movement, clickable room travel, challenge dialogs, progress, hints, and final badge. All simulated and local to the browser.
 
 
 ## v5.3 Newsroom newspaper + decoder
-The first Mission-X terminal now displays an original fictional rover newspaper and an interactive ROT13/rotation slider. Rotate `URYVB` by 13 positions to decode `HELIO`, then submit the word to advance. No external network calls or real NASA systems.
+The first Project Cipher terminal now displays an original fictional rover newspaper and an interactive ROT13/rotation slider. Rotate `URYVB` by 13 positions to decode `HELIO`, then submit the word to advance. No external network calls or real NASA systems.
 
 
 ## v5.5 — Story-driven town adventure
