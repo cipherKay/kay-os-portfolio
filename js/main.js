@@ -44,8 +44,12 @@ function fitWindow(win,center=false){
   if(win.classList.contains('is-maximized')){win.style.left=b.margin+'px';win.style.top=b.top+'px';return;}
   const r=win.getBoundingClientRect();
   const width=Math.min(r.width,b.width),height=Math.min(r.height,b.height);
-  const x=center?Math.max(b.margin,(window.innerWidth-width)/2):Math.max(b.margin,Math.min(parseFloat(win.style.left)||r.left,window.innerWidth-width-b.margin));
-  const y=center?Math.max(b.top,b.top+Math.min(24,area.children.length*16)):Math.max(b.top,Math.min(parseFloat(win.style.top)||r.top,window.innerHeight-height-b.bottom));
+  if(r.width>b.width)win.style.width=b.width+'px';
+  if(r.height>b.height)win.style.height=b.height+'px';
+  const currentX=Number.parseFloat(win.style.left);
+  const x=center?Math.max(b.margin,(window.innerWidth-width)/2):Math.max(b.margin,Math.min(Number.isFinite(currentX)?currentX:r.left,window.innerWidth-width-b.margin));
+  const currentY=Number.parseFloat(win.style.top);
+  const y=center?Math.max(b.top,Math.min((window.innerHeight-height)/2,window.innerHeight-height-b.bottom)):Math.max(b.top,Math.min(Number.isFinite(currentY)?currentY:r.top,window.innerHeight-height-b.bottom));
   win.style.left=Math.round(x)+'px';win.style.top=Math.round(y)+'px';
 }
 function openApp(id){
