@@ -111,3 +111,22 @@ The first Project Cipher terminal now displays an original fictional rover newsp
 - The facility remains inaccessible until the cafe briefing is complete. A fictional security guard verifies the code before access to the ten training terminals.
 - Keyboard (WASD/arrows), mobile touch pad, INTERACT, and clickable town landmarks.
 - Everything is a fictional, local-only educational simulation.
+
+
+## v5.7 Expanded Town
+The town is now a 57×43 tile scrolling overworld (formerly 25×19). The camera follows Agent NOVA. Home is northwest, café northeast, park southwest, and facility southeast. Follow the connected roads; other rooms and challenge progress are unchanged.
+
+
+## v5.8 Town & Open Park
+- Town expanded to 73 x 55 tiles with scrolling camera.
+- Park drawn as an open green space with paths, trees, benches, flowers and a pond, not a building.
+- Town entrance coordinates and exits updated.
+
+
+## v5.9 park NPCs and collectible
+
+Park now has an interactive dog walker, jogger, and a hidden Star Fragment [ORBIT] at the flower patch. Walk near each and press INTERACT. The field log shows the collectible, and Restart resets it. The café and facility mission order remains unchanged.
+
+
+## v6.0 Project Cipher
+Inventory button for newspaper and Star Fragment collectibles; moving park NPCs; optional Easter egg puzzle (talk to both characters and find the Star Fragment). Fictional simulation.
