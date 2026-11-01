@@ -1,16 +1,16 @@
-/* KAY OS v3.9 — spacious, accessible app windows */
-#os .window[data-window]{display:flex;flex-direction:column;overflow:hidden;min-width:0;}
-#os .window[data-window] .window-bar{flex:0 0 auto;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:grab}
-#os .window[data-window] .window-content{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:clamp(14px,2vw,28px)}
-#os .window-controls{display:flex;align-items:center;gap:8px;flex:none}
-#os .window-controls button{min-width:34px;min-height:30px;display:grid;place-items:center;cursor:pointer}
-#os .window[data-window]:not([data-window="terminal"]):not([data-window="about"]):not([data-window="contact"]){width:min(1180px,calc(100vw - 220px));height:min(760px,calc(100dvh - 158px));max-height:none;left:clamp(175px,12vw,225px)!important;top:clamp(90px,11vh,115px)!important}
-#os .window[data-window="recognition"]{width:min(1240px,calc(100vw - 210px));height:calc(100dvh - 155px)}
-#os .window[data-window="recognition"] .recognition-demo-host{width:100%;min-width:0}
+/* KAY OS v4.1: viewport-safe window manager. No fixed left/top !important rules. */
+#os .window[data-window]{position:fixed;display:flex;flex-direction:column;box-sizing:border-box;overflow:hidden;min-width:0;width:min(1080px,calc(100vw - 40px));height:min(740px,calc(100dvh - 160px));max-height:none;border-radius:14px;}
+#os .window[data-window="projects"]{width:min(1180px,calc(100vw - 40px));}
+#os .window[data-window="recognition"]{width:min(1260px,calc(100vw - 40px));}
+#os .window[data-window] .window-bar{flex:0 0 auto;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:grab;touch-action:none;user-select:none}
+#os .window[data-window] .window-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#os .window[data-window] .window-controls{display:flex;align-items:center;gap:8px;flex:none}
+#os .window[data-window] .window-controls button{min-width:36px;min-height:32px;display:grid;place-items:center;cursor:pointer}
+#os .window[data-window] .window-content{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:contain;padding:clamp(14px,2vw,26px)}
+#os .window[data-window].is-maximized{width:calc(100vw - 40px);height:calc(100dvh - 156px);max-height:none;border-radius:12px}
+#os .window[data-window].is-maximized .window-bar{cursor:default}
 #os .window[data-window="recognition"] .recognize-grid{grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr)}
 #os .window[data-window="recognition"] .recognize-social-stream{grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr))}
-#os .window[data-window].is-maximized{width:calc(100vw - 32px)!important;height:calc(100dvh - 148px)!important;max-height:none!important;left:16px!important;top:80px!important;border-radius:12px}
-#os .window[data-window].is-maximized .window-bar{cursor:default}
-@media(max-width:1000px){#os .window[data-window]:not([data-window="terminal"]):not([data-window="about"]):not([data-window="contact"]){width:calc(100vw - 155px);left:140px!important;top:90px!important;height:calc(100dvh - 165px)}#os .window[data-window="recognition"] .recognize-grid{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:700px){#os .window[data-window]{width:calc(100vw - 20px)!important;left:10px!important;top:75px!important;height:calc(100dvh - 148px)!important;max-height:none!important}#os .window[data-window] .window-content{padding:12px}#os .window[data-window="recognition"] .recognize-kpis,#os .window[data-window="recognition"] .recognize-grid,#os .window[data-window="recognition"] .recognize-form,#os .window[data-window="recognition"] .recognize-rewards{grid-template-columns:1fr 1fr}#os .window[data-window="recognition"] .recognize-grid{grid-template-columns:1fr}#os .window[data-window="recognition"] .recognize-top{flex-direction:column;align-items:stretch}#os .window[data-window].is-maximized{left:10px!important;top:75px!important;width:calc(100vw - 20px)!important}}
+@media(max-width:1000px){#os .window[data-window="recognition"] .recognize-grid{grid-template-columns:1fr}}
+@media(max-width:700px){#os .window[data-window]{width:calc(100vw - 20px);height:calc(100dvh - 142px)}#os .window[data-window].is-maximized{width:calc(100vw - 20px);height:calc(100dvh - 142px)}#os .window[data-window] .window-content{padding:12px}#os .window[data-window="recognition"] .recognize-grid{grid-template-columns:1fr}#os .window[data-window="recognition"] .recognize-kpis,#os .window[data-window="recognition"] .recognize-form,#os .window[data-window="recognition"] .recognize-rewards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:420px){#os .window[data-window="recognition"] .recognize-kpis,#os .window[data-window="recognition"] .recognize-form,#os .window[data-window="recognition"] .recognize-rewards{grid-template-columns:1fr}}
