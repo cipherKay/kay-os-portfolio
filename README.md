@@ -82,3 +82,6 @@ Replaced the static Security Lab demo with a fictional SOC tabletop: evidence ti
 - Mobile Project Explorer uses a single scrolling content area with a fixed accessible window title bar.
 - Added `css/mobile-explorer-v5.css` and updated `js/main.js`. Desktop project explorer remains two-column.
 - Browser/device interaction testing is still required after publishing.
+
+## Mission-X (v5.1)
+A 10-stage, fictional, local-only space research spy puzzle game. Launch from KAY OS desktop, Apps menu, or Quick Launch. Covers ROT13, HTML, networking, cloud transport, forensic imaging, Python, OSINT, binary, read-only SQL, and simulated steganography. No real NASA/JPL infrastructure is accessed. All game state resets on reopening.
