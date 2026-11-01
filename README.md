@@ -85,3 +85,7 @@ Replaced the static Security Lab demo with a fictional SOC tabletop: evidence ti
 
 ## Mission-X (v5.1)
 A 10-stage, fictional, local-only space research spy puzzle game. Launch from KAY OS desktop, Apps menu, or Quick Launch. Covers ROT13, HTML, networking, cloud transport, forensic imaging, Python, OSINT, binary, read-only SQL, and simulated steganography. No real NASA/JPL infrastructure is accessed. All game state resets on reopening.
+
+
+## v5.2 Mission-X pixel adventure
+Original top-down pixel-art facility map with ten numbered terminals, arrow/WASD and touch-pad movement, clickable room travel, challenge dialogs, progress, hints, and final badge. All simulated and local to the browser.
