@@ -1,0 +1,51 @@
+/* KAY OS v4.6: touch-first phone and tablet layout. Loaded last to override legacy desktop rules. */
+html,body{max-width:100%;overflow-x:clip}
+#os,#os .os-wallpaper{width:100%;max-width:100%;}
+#os .window[data-window] .window-content{overflow-wrap:anywhere;min-width:0}
+#os .window[data-window] img,#os .window[data-window] svg,#os .window[data-window] canvas{max-width:100%;height:auto}
+#os .window[data-window] input,#os .window[data-window] select,#os .window[data-window] textarea{max-width:100%;min-width:0}
+@media(max-width:850px){
+ #os .os-wallpaper{height:100dvh!important;min-height:0!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;padding:0 12px!important;}
+ #os .os-head{flex:0 0 auto!important;width:100%;height:auto!important;min-height:60px!important;padding:10px 4px!important;display:flex!important;gap:8px}
+ #os .os-brand{font-size:.95rem;min-width:0}
+ #os .os-head-right{gap:7px;min-width:0}
+ #os .os-exit{margin-left:0;padding:8px 10px;font-size:.72rem}
+ #os .desktop-side{flex:0 0 auto!important;position:relative!important;inset:auto!important;width:100%!important;margin:8px 0 0!important;}
+ #os .desktop-icons{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;margin:0!important}
+ #os .desktop-icons button{min-width:0!important;min-height:58px!important;display:flex!important;flex-direction:row!important;gap:6px!important;padding:6px!important;font-size:.7rem!important}
+ #os .desktop-icons .app-glyph{flex-shrink:0;width:29px!important;height:29px!important;font-size:1rem!important}
+ #os .os-dashboard{position:relative!important;inset:auto!important;flex:1 1 auto!important;min-height:0!important;width:100%!important;max-width:100%!important;margin:12px 0!important;padding:18px!important;overflow-y:auto!important;}
+ #os .os-dashboard h2{font-size:clamp(1.9rem,7vw,3rem)!important}
+ #os .dashboard-stats{flex-wrap:wrap!important}
+ #os .dashboard-stats>div{min-width:90px;flex:1 1 30%}
+ #os .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #os .taskbar{position:relative!important;inset:auto!important;flex:0 0 56px!important;width:calc(100% + 24px)!important;margin:0 -12px!important;padding:0 12px!important;gap:8px!important;min-height:56px!important;z-index:30!important}
+ #os .taskbar button{padding:9px 12px!important;min-height:40px}
+ #os .taskbar #active-app{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+ #os #window-area{position:fixed!important;inset:0!important;z-index:35!important;overflow:hidden!important;pointer-events:none}
+ #os #window-area>.window[data-window],#os #window-area>.window[data-window].is-maximized{position:absolute!important;top:calc(60px + env(safe-area-inset-top,0px))!important;left:8px!important;right:8px!important;bottom:calc(64px + env(safe-area-inset-bottom,0px))!important;width:calc(100% - 16px)!important;height:auto!important;max-height:none!important;min-height:0!important;display:flex!important;flex-direction:column!important;border-radius:12px!important;overflow:hidden!important;transform:none!important;}
+ #os .window[data-window] .window-bar{flex:0 0 auto;min-height:52px!important;padding:8px 10px!important;cursor:default!important;touch-action:auto!important}
+ #os .window[data-window] .window-controls button{min-width:42px!important;min-height:40px!important}
+ #os .window[data-window] .window-content{flex:1 1 auto!important;min-height:0!important;overflow:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:14px!important}
+ #os .explorer-layout,#os .recognize-grid,#os .nl-layout,#os .demo-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+ #os .explorer-list{max-height:220px!important;overflow:auto!important}
+ #os .explorer-detail{min-width:0!important}
+ #os .soc-kpis{grid-template-columns:1fr!important}
+ #os .soc-table-wrap,.demo-table-wrap{overflow-x:auto!important;max-width:100%!important;-webkit-overflow-scrolling:touch}
+ #os .soc-actions button,#os .demo-primary{min-height:44px}
+}
+@media(max-width:480px){
+ .wrap{padding-left:16px;padding-right:16px}.nav{gap:10px}.nav nav{gap:10px;flex-wrap:wrap}
+ #os .os-wallpaper{padding:0 8px!important}
+ #os .os-head{min-height:56px!important}
+ #os .desktop-icons{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #os .desktop-icons button{font-size:.68rem!important}
+ #os .os-dashboard{padding:14px!important;margin:8px 0!important}
+ #os .quick-grid{grid-template-columns:1fr!important}
+ #os .dashboard-stats>div{flex:1 1 45%}
+ #os .taskbar{width:calc(100% + 16px)!important;margin:0 -8px!important}
+ #os #window-area>.window[data-window],#os #window-area>.window[data-window].is-maximized{top:calc(56px + env(safe-area-inset-top,0px))!important;left:5px!important;right:5px!important;bottom:calc(60px + env(safe-area-inset-bottom,0px))!important;width:calc(100% - 10px)!important}
+ #os .window[data-window] .window-content{padding:11px!important}
+ #os .window[data-window="recognition"] .recognize-kpis,#os .window[data-window="recognition"] .recognize-form,#os .window[data-window="recognition"] .recognize-rewards{grid-template-columns:minmax(0,1fr)!important}
+ #os .soc-stepper span{flex:1 1 100%!important}
+}
