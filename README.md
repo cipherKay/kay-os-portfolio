@@ -66,3 +66,11 @@ Replaced the static Security Lab demo with a fictional SOC tabletop: evidence ti
 - Dashboard and app windows fit narrow viewports without horizontal overflow.
 - Updated on-screen version to v4.7 and corrected window layer stylesheet path.
 - Browser-based functional/visual testing is still recommended.
+
+
+## v4.9 Mobile Quick Launch fix
+- Compact one-column Quick Launch rows on phones and tablets.
+- Fixed icon/title overlap by overriding older absolute positioning.
+- Reduced card height and added bottom padding above the taskbar.
+- Preserves existing demos and desktop layout.
+- Verify on an actual mobile browser after deployment.
