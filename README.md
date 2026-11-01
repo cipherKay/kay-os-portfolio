@@ -1,3 +1,7 @@
+## v4.8 mobile layout refinement
+
+Compact mobile shortcuts, shorter labels, three-up KPI cards, reduced taskbar height, and preserved desktop layout. Verify on real devices after deployment.
+
 # KAY OS v3.4 — Interactive Project Demos
 
 All eight featured projects have interactive browser demonstrations. Device ordering retains its request/list/status/notification preview. Seven other projects now include local, fictional-data interactions.
