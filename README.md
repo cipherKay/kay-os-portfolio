@@ -54,3 +54,11 @@ Replaced the static Security Lab demo with a fictional SOC tabletop: evidence ti
 - Responsive desktop shortcuts, taskbar, Project Explorer, Recognition App, Security Lab, and demo grids.
 - Added `css/mobile-v4.6.css`, loaded last to override older window positioning styles.
 - Verify on physical phones and tablets before production use.
+
+
+## v4.7 Mobile UX repair
+- Added `css/mobile-v4.7.css` loaded last to override legacy desktop breakpoints.
+- Mobile shortcuts are compact 3-column tiles with wrapped labels.
+- Dashboard and app windows fit narrow viewports without horizontal overflow.
+- Updated on-screen version to v4.7 and corrected window layer stylesheet path.
+- Browser-based functional/visual testing is still recommended.
