@@ -74,3 +74,11 @@ Replaced the static Security Lab demo with a fictional SOC tabletop: evidence ti
 - Reduced card height and added bottom padding above the taskbar.
 - Preserves existing demos and desktop layout.
 - Verify on an actual mobile browser after deployment.
+
+## v5.0 — Mobile Project Explorer
+- On phone-sized viewports, Project Explorer uses a two-screen flow: project list → project details.
+- Tap a project to see its challenge, implementation, outcome and an Open interactive demo button.
+- Use Back to projects to return to the list. Filter chips remain available on the list screen.
+- Mobile Project Explorer uses a single scrolling content area with a fixed accessible window title bar.
+- Added `css/mobile-explorer-v5.css` and updated `js/main.js`. Desktop project explorer remains two-column.
+- Browser/device interaction testing is still required after publishing.
