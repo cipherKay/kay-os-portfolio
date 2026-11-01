@@ -12,3 +12,6 @@ The Reporting Automation and Reporting Redesign project windows now contain resp
 
 ## v3.6 Recognition App
 Role-based Employee, Manager and Admin preview, recognition submissions, approval queue, points ledger, leaderboard and fictional rewards catalog. All data is local browser demo data and resets on refresh. No real SharePoint, Power Automate or Teams integration.
+
+## v3.7 recognition preview
+The recognition form has a Preview recognition button. The preview displays recipient, category, points, personalized message, privacy and Teams sharing settings. Submissions appear as pending on the Overview screen; approving or declining updates the status of the simulated delivered recognition. No external notifications are sent.
