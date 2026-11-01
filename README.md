@@ -15,3 +15,7 @@ Role-based Employee, Manager and Admin preview, recognition submissions, approva
 
 ## v3.7 recognition preview
 The recognition form has a Preview recognition button. The preview displays recipient, category, points, personalized message, privacy and Teams sharing settings. Submissions appear as pending on the Overview screen; approving or declining updates the status of the simulated delivered recognition. No external notifications are sent.
+
+
+## v3.8 — Teams-style recognition feed
+Approved public recognition submissions appear as polished cards on the Overview screen, with recipient initials, sender, recognition badge, message, points, and approval indicator. Private recognition does not appear in the public feed. All data and messaging are fictional browser-only simulations.
