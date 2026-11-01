@@ -42,3 +42,7 @@ All application windows now render in a dedicated fixed viewport layer (`#window
 - Initialized the in-browser order list, status options, and sequential request IDs.
 - The Add request to list button now adds a demo row and confirms submission.
 - Editing a status displays a fictional notification preview; no email is sent.
+
+## v4.5 — Security Lab
+
+Replaced the static Security Lab demo with a fictional SOC tabletop: evidence timeline, triage acknowledgement, containment recommendation, report generation, and copy action. The case uses a reserved example IP and example.test address; no live systems or external services.
