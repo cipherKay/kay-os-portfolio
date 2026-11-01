@@ -33,3 +33,7 @@ Upload **the contents** of this folder to the root of `cipherKay/kay-os-portfoli
 - Cache-busted CSS and JS references for GitHub Pages.
 
 Upload **all extracted files and folders** to the repository root. GitHub Pages should publish from the `main` branch root.
+
+
+## v3.3 additions
+Device Ordering & Status Notifications (fictional interactive demonstration), SharePoint Document Library, SharePoint Site Revamp, and Reporting Redesign. The device ordering demo stores data only in the current browser page and previews notifications without sending them.
