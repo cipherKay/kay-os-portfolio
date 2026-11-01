@@ -37,3 +37,8 @@ Restores click handlers for Explore in KAY OS, all View project buttons, desktop
 
 ## v4.3 Window layer fix
 All application windows now render in a dedicated fixed viewport layer (`#window-area`), outside desktop grid placement. `css/window-layer-v4.3.css` overrides legacy positioning rules. Project Explorer and other app windows are centered, bounded, and draggable. Homepage project count updated to 9.
+
+## v4.4 Device Ordering repair
+- Initialized the in-browser order list, status options, and sequential request IDs.
+- The Add request to list button now adds a demo row and confirms submission.
+- Editing a status displays a fictional notification preview; no email is sent.
