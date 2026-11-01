@@ -89,3 +89,7 @@ A 10-stage, fictional, local-only space research spy puzzle game. Launch from KA
 
 ## v5.2 Mission-X pixel adventure
 Original top-down pixel-art facility map with ten numbered terminals, arrow/WASD and touch-pad movement, clickable room travel, challenge dialogs, progress, hints, and final badge. All simulated and local to the browser.
+
+
+## v5.3 Newsroom newspaper + decoder
+The first Mission-X terminal now displays an original fictional rover newspaper and an interactive ROT13/rotation slider. Rotate `URYVB` by 13 positions to decode `HELIO`, then submit the word to advance. No external network calls or real NASA systems.
