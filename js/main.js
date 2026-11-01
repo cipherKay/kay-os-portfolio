@@ -97,3 +97,58 @@ window.addEventListener('resize',()=>area.querySelectorAll('.window').forEach(wi
 function renderOrders(win){const tbody=win.querySelector('[data-order-rows]');if(!tbody)return;tbody.replaceChildren();sampleOrders.forEach(order=>{const tr=document.createElement('tr');[order.id,order.requester,order.device].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td)});const td=document.createElement('td');const select=document.createElement('select');select.setAttribute('aria-label','Status for order '+order.id);select.dataset.orderId=order.id;statuses.forEach(st=>{const option=document.createElement('option');option.value=st;option.textContent=st;option.selected=st===order.status;select.append(option)});td.append(select);tr.append(td);tbody.append(tr)})}
 document.addEventListener('submit',e=>{if(e.target.id!=='device-order-form')return;e.preventDefault();const win=e.target.closest('.window');const form=new FormData(e.target);sampleOrders.push({id:nextOrder++,requester:String(form.get('requester')).trim(),device:String(form.get('device')),status:'Submitted'});renderOrders(win);e.target.reset();win.querySelector('[data-notification-preview]').textContent='New fictional request added to the tracking list. Change its status to preview a client notification.'});
 document.addEventListener('change',e=>{const select=e.target.closest('[data-order-id]');if(!select)return;const order=sampleOrders.find(x=>x.id===Number(select.dataset.orderId));if(!order)return;order.status=select.value;const win=select.closest('.window');win.querySelector('[data-notification-preview]').textContent=`To: ${order.requester} (demo requester) | Subject: Device request #${order.id} update | Your ${order.device.toLowerCase()} request status is now: ${order.status}. This is a preview; no message was sent.`});
+
+
+// KAY OS v4.2 — restore portfolio/desktop controls removed in an earlier build.
+// Delegate app clicks so dynamically created Project Explorer buttons also work.
+document.addEventListener('click', (event) => {
+  const appButton = event.target.closest('[data-app]');
+  if (appButton) {
+    event.preventDefault();
+    const id = appButton.dataset.app;
+    if (apps[id]) launch(id);
+    return;
+  }
+  const launcher = event.target.closest('[data-launch]');
+  if (launcher) {
+    event.preventDefault();
+    const fromProjects = Boolean(launcher.closest('#projects'));
+    launch(fromProjects ? 'projects' : undefined);
+  }
+});
+
+const exitButton = document.getElementById('exit-os');
+if (exitButton) exitButton.addEventListener('click', exit);
+if (start) start.addEventListener('click', () => {
+  const willOpen = menu.classList.contains('hidden');
+  menu.classList.toggle('hidden', !willOpen);
+  start.setAttribute('aria-expanded', String(willOpen));
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !os.classList.contains('hidden')) {
+    if (!menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      start.setAttribute('aria-expanded','false');
+    } else {
+      const topWindow = [...area.querySelectorAll('.window')]
+        .sort((a,b) => Number(b.style.zIndex) - Number(a.style.zIndex))[0];
+      if (topWindow) topWindow.querySelector('.window-controls button:last-child')?.click();
+      else exit();
+    }
+  }
+});
+const themeButton = document.getElementById('theme');
+if (themeButton) themeButton.addEventListener('click', () => document.body.classList.toggle('light'));
+const yearNode = document.getElementById('year');
+if (yearNode) yearNode.textContent = new Date().getFullYear();
+const clockNode = document.getElementById('clock');
+function updateClock() { if(clockNode) clockNode.textContent = new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}); }
+updateClock();
+setInterval(updateClock, 30000);
+
+// Support links previously published with #/projects while preserving normal #projects anchors.
+function handlePortfolioRoute() {
+  if (location.hash === '#/projects') launch('projects');
+}
+window.addEventListener('hashchange', handlePortfolioRoute);
+handlePortfolioRoute();
