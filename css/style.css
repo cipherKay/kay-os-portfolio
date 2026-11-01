@@ -5,3 +5,30 @@
 @media(max-width:850px){.os-dashboard{left:165px;right:20px;top:15%}.os-dashboard h2{font-size:3.3rem}.quick-grid{grid-template-columns:1fr}.quick-grid button{min-height:100px}.dashboard-stats{margin:20px 0}.desktop-side{left:18px;width:100px}.window{left:17%;width:80vw}}
 @media(max-width:600px){.os-head{padding:0 14px;height:62px}.os-head-right{font-size:0}.os-exit{font-size:.72rem;margin-left:4px}.desktop-side{top:72px;left:12px;width:calc(100% - 24px)}.side-caption{display:none}.desktop-icons{grid-template-columns:repeat(6,1fr);gap:2px;margin:0}.desktop-icons button{font-size:.57rem;min-height:67px}.desktop-icons .app-glyph{width:35px;height:35px;font-size:1.25rem}.os-dashboard{left:18px;right:18px;top:190px}.os-dashboard h2{font-size:2.6rem}.os-dashboard>p{font-size:.86rem}.os-overline span{display:none}.dashboard-stats{margin:17px 0}.dashboard-stats strong{font-size:1.35rem}.dashboard-stats small{font-size:.5rem}.quick-label span{display:none}.quick-grid{grid-template-columns:1fr;gap:7px}.quick-grid button{min-height:64px;padding:9px 14px 9px 53px;gap:0}.quick-symbol{position:absolute;left:16px;top:13px}.quick-grid small{font-size:.67rem}.task-status{display:none}.taskbar{padding:0 10px}.window{top:20%;left:3%;width:94vw;max-height:66vh}.window-content .app-grid{grid-template-columns:1fr}}
 @media(max-height:750px) and (min-width:601px){.os-dashboard{top:13%}.os-dashboard h2{font-size:3.5rem}.dashboard-stats{margin:17px 0}.quick-grid button{min-height:115px}}
+
+/* KAY OS v2.1 desktop layout repair — overrides older desktop rules */
+#os .os-wallpaper{position:relative;min-height:100dvh;height:100dvh;overflow:auto;padding-bottom:72px}
+#os .os-head{position:relative;z-index:5;min-height:76px;display:flex;align-items:center;justify-content:space-between;padding:15px 28px}
+#os .desktop-side{position:absolute;top:108px;left:24px;width:126px;z-index:2}
+#os .desktop-icons{position:static;display:grid;grid-template-columns:1fr;gap:9px;margin-top:14px}
+#os .desktop-icons button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:75px;width:100%;padding:8px;background:transparent;border:1px solid transparent;border-radius:12px;color:#eaf8ff;font-size:.75rem;text-align:center}
+#os .desktop-icons button:hover{background:#ffffff12;border-color:#ffffff22}
+#os .desktop-icons .app-glyph{display:grid;place-items:center;width:42px;height:42px;font-size:1.5rem;border-radius:12px;background:#16364a;border:1px solid #3b6678;color:#62e8de}
+#os .os-dashboard{position:relative;top:auto;left:auto;right:auto;max-width:940px;width:calc(100% - 250px);margin:50px auto 100px max(185px,calc((100% - 940px)/2));padding:26px 30px 32px;border:1px solid #315268;border-radius:22px;background:linear-gradient(135deg,#0e2639e8,#0b1c2de8);box-shadow:0 24px 70px #0005;z-index:1}
+#os .os-dashboard h2{font-size:clamp(2.5rem,4vw,4.1rem);line-height:1.13;letter-spacing:-.045em;margin:14px 0}
+#os .os-dashboard>p{max-width:650px;color:#b2cad8}
+#os .dashboard-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0}
+#os .dashboard-stats>div{padding:16px;border:1px solid #35576a;border-radius:12px;background:#ffffff08;display:flex;flex-direction:column}
+#os .dashboard-stats strong{font-size:1.9rem;line-height:1.2;color:#75e7de}
+#os .dashboard-stats small{font-size:.65rem;letter-spacing:.07em;color:#a7c3d1}
+#os .quick-label{display:flex;justify-content:space-between;gap:10px;margin-bottom:14px}
+#os .quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#os .quick-grid button{appearance:none;display:flex;flex-direction:column;align-items:flex-start;gap:8px;position:relative;min-height:148px;padding:19px;border:1px solid #34596e;border-radius:14px;background:#143247;color:#eafaff;text-align:left;white-space:normal}
+#os .quick-grid button:hover{background:#1b4258;border-color:#5de4db;transform:translateY(-2px)}
+#os .quick-grid button strong{font-size:1rem}
+#os .quick-grid button small{color:#a8c7d6;font-size:.77rem}
+#os .quick-symbol{font-size:1.6rem;color:#60e8dd}
+#os .quick-arrow{position:absolute;right:15px;top:15px;color:#7cc9db}
+#os .taskbar{position:fixed;bottom:0;left:0;right:0;z-index:30}
+@media(max-width:900px){#os .desktop-side{position:relative;top:auto;left:auto;width:auto;margin:8px 18px}#os .side-caption{display:none}#os .desktop-icons{grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}#os .desktop-icons button{font-size:.65rem;min-height:72px}#os .os-dashboard{width:calc(100% - 36px);margin:24px 18px 100px;padding:24px}#os .quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){#os .os-head{padding:12px 14px}#os .os-head-right{font-size:0}#os .desktop-icons{grid-template-columns:repeat(3,minmax(0,1fr))}#os .os-dashboard{margin-top:18px;padding:20px}#os .os-dashboard h2{font-size:2.3rem}#os .dashboard-stats{gap:6px}#os .dashboard-stats>div{padding:10px}#os .dashboard-stats strong{font-size:1.4rem}#os .dashboard-stats small{font-size:.55rem}#os .quick-grid{grid-template-columns:1fr}#os .quick-grid button{min-height:96px}#os .quick-label span{display:none}}

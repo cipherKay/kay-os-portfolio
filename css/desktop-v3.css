@@ -1,0 +1,36 @@
+/* KAY OS v3: isolated, responsive workspace layout */
+#os, #os *{box-sizing:border-box}
+#os .os-wallpaper{position:relative;display:grid;grid-template-columns:116px minmax(0,1fr);grid-template-rows:74px minmax(0,1fr) 58px;column-gap:24px;min-height:100dvh;height:100dvh;overflow:auto;padding:0 24px;background:radial-gradient(ellipse at 85% 22%,#123d54 0,transparent 48%),radial-gradient(ellipse at 80% 90%,#251b4b 0,transparent 48%),linear-gradient(145deg,#071320,#0b2435 75%,#081421);color:#edfaff}
+#os .os-head{grid-column:1/-1;grid-row:1;position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 2px;min-height:74px;z-index:4;border-bottom:1px solid #ffffff15}
+#os .os-brand{display:flex;align-items:center;gap:4px;font-weight:850}
+#os .os-head-right{display:flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.04em}
+#os .desktop-side{position:relative;grid-column:1;grid-row:2;top:auto;left:auto;width:auto;margin:22px 0 20px;z-index:2;min-width:0}
+#os .side-caption{display:block;font-size:.64rem;color:#7ba5b7;letter-spacing:.08em;margin:0 0 16px}
+#os .desktop-icons{position:static;display:grid;grid-template-columns:1fr;gap:8px;margin:0}
+#os .desktop-icons button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;width:100%;min-height:78px;padding:9px 4px;border-radius:12px;border:1px solid transparent;background:transparent;color:#c8e4ee;text-align:center;font-size:.72rem;line-height:1.25;white-space:normal}
+#os .desktop-icons button:hover,#os .desktop-icons button:focus-visible{background:#2b526055;border-color:#4adbc666;color:white}
+#os .desktop-icons .app-glyph{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;border:1px solid #2b6171;background:#113648;color:#56e4d8;font-size:1.5rem}
+#os .os-dashboard{grid-column:2;grid-row:2;position:relative;top:auto;left:auto;right:auto;width:min(100%,1040px);max-width:none;margin:30px auto 36px;padding:clamp(24px,3vw,42px);border:1px solid #335a70;border-radius:24px;background:linear-gradient(135deg,#10293cdd,#0a1a2cdd);box-shadow:0 22px 75px #0005;align-self:start;z-index:1}
+#os .os-overline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#5ce8db;font-size:.7rem;font-weight:800;letter-spacing:.1em}
+#os .os-dashboard h2{font-size:clamp(2.2rem,4vw,4.1rem);line-height:1.1;letter-spacing:-.045em;margin:18px 0 16px;max-width:800px;color:#effaff}
+#os .os-dashboard h2 span{color:#56e3d6}
+#os .os-dashboard>p{color:#aac7d5;max-width:700px;font-size:1rem;line-height:1.6}
+#os .dashboard-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0 30px}
+#os .dashboard-stats>div{display:flex;flex-direction:column;gap:5px;min-width:0;padding:14px 17px;border:1px solid #355568;border-radius:12px;background:#ffffff08}
+#os .dashboard-stats strong{font-size:1.7rem;line-height:1.15;color:#6de9df}
+#os .dashboard-stats small{color:#aac7d6;font-size:.68rem;letter-spacing:.07em}
+#os .quick-label{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;font-weight:800;font-size:.76rem;letter-spacing:.08em;color:#e9f9ff}
+#os .quick-label span{font-weight:400;letter-spacing:0;color:#a9c3d2}
+#os .quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#os .quick-grid button{appearance:none;display:flex;flex-direction:column;align-items:flex-start;position:relative;gap:9px;min-height:158px;padding:20px;border:1px solid #3b6277;border-radius:15px;background:linear-gradient(150deg,#183b52,#10263a);color:#eafaff;text-align:left;white-space:normal;line-height:1.3;box-shadow:0 10px 24px #0002}
+#os .quick-grid button:hover,#os .quick-grid button:focus-visible{background:#214c60;border-color:#55e5d9;transform:translateY(-2px)}
+#os .quick-grid button strong{font-size:1rem;color:#effaff}
+#os .quick-grid button small{font-size:.78rem;color:#afcad7}
+#os .quick-symbol{font-size:1.8rem;line-height:1.2;color:#5de8dd}
+#os .quick-arrow{position:absolute;top:16px;right:16px;color:#77d7dd}
+#os .taskbar{grid-column:1/-1;grid-row:3;position:sticky;bottom:0;left:auto;right:auto;display:flex;align-items:center;min-height:58px;height:58px;z-index:30;margin:0 -24px;padding:0 24px;background:#071420ed;border-top:1px solid #ffffff30;backdrop-filter:blur(16px)}
+#os .window{position:fixed;top:18%;left:30%;width:min(650px,calc(100vw - 40px));max-height:min(70vh,680px);z-index:20;overflow:auto}
+#os .window-content{padding:24px}
+#os .start-menu{position:fixed;z-index:40}
+@media(max-width:850px){#os .os-wallpaper{grid-template-columns:1fr;grid-template-rows:70px auto 1fr 58px;gap:0;padding:0 16px;height:100dvh}#os .os-head{grid-column:1;grid-row:1}#os .desktop-side{grid-column:1;grid-row:2;margin:14px 0 0}#os .side-caption{display:none}#os .desktop-icons{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}#os .desktop-icons button{min-height:72px;font-size:.62rem}#os .desktop-icons .app-glyph{width:36px;height:36px;font-size:1.2rem}#os .os-dashboard{grid-column:1;grid-row:3;margin:20px auto 26px;padding:24px}#os .taskbar{grid-column:1;grid-row:4;margin:0 -16px;padding:0 16px}#os .window{left:5%!important;top:15%!important;width:90vw}}
+@media(max-width:580px){#os .os-head-right{font-size:0}#os .os-head-right button{font-size:.75rem}#os .desktop-icons{grid-template-columns:repeat(3,minmax(0,1fr))}#os .desktop-icons button{min-height:58px;flex-direction:row;gap:5px;font-size:.65rem}#os .desktop-icons .app-glyph{width:28px;height:28px;font-size:1rem;flex-shrink:0}#os .os-dashboard{padding:18px}#os .os-dashboard h2{font-size:2.2rem}#os .dashboard-stats{gap:6px}#os .dashboard-stats>div{padding:10px 7px}#os .dashboard-stats strong{font-size:1.25rem}#os .dashboard-stats small{font-size:.55rem}#os .quick-grid{grid-template-columns:1fr}#os .quick-grid button{min-height:105px}#os .task-status{display:none}}
