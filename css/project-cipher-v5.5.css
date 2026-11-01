@@ -6,3 +6,13 @@
 [data-project-cipher] .px-modal-box{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}
 [data-project-cipher] .px-modal-box:has(.px-news-feature:not([hidden])){width:min(96vw,900px)}
 @media(max-width:600px){[data-project-cipher] .px-top{align-items:start}[data-project-cipher] .px-top p{font-size:11px}[data-project-cipher] .px-modal{padding:6px}[data-project-cipher] .px-modal-box{padding:12px;max-height:calc(100dvh - 12px)}[data-project-cipher] .px-room-list{grid-template-columns:1fr 1fr}}
+
+/* v6.0 inventory and collectible UI */
+[data-project-cipher] .px-inventory-panel[hidden]{display:none!important}
+[data-project-cipher] .px-inventory-panel{position:absolute;z-index:45;inset:10% 8%;overflow:auto;background:#142c3d;color:#e9f5ee;border:4px solid #63d7c6;box-shadow:0 12px 35px #0009;padding:16px;font-family:monospace}
+[data-project-cipher]{position:relative}
+[data-project-cipher] .px-inventory-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+[data-project-cipher] .px-inventory-head button{background:#285264;color:white;border:1px solid #83ded2;padding:8px}
+[data-project-cipher] .px-item{border:2px solid #456d77;padding:10px;margin-bottom:10px;background:#1d3b4b}
+[data-project-cipher] .px-item p{margin:5px 0 0;font-size:12px}
+@media(max-width:650px){[data-project-cipher] .px-inventory-panel{inset:4% 2%;padding:12px}}
