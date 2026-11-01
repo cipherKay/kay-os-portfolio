@@ -1,0 +1,36 @@
+/* KAY OS v4.8: compact mobile layout. Loaded last. */
+@media(max-width:850px){
+ #os .os-wallpaper{padding-inline:12px!important;}
+ #os .os-head{min-height:54px!important;padding:8px 0!important;gap:6px!important;}
+ #os .desktop-side{margin:5px 0 3px!important;}
+ #os .desktop-icons{gap:7px!important;}
+ #os .desktop-icons button{min-height:66px!important;max-height:78px!important;gap:4px!important;padding:8px 3px!important;line-height:1.1!important;font-size:clamp(10px,2.7vw,13px)!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important;}
+ #os .desktop-icons button span:last-child{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;width:100%!important;}
+ #os .desktop-icons .app-glyph{width:27px!important;height:27px!important;font-size:1rem!important;}
+ #os .os-dashboard{margin:6px 0 4px!important;padding:14px!important;border-radius:15px!important;}
+ #os .os-dashboard h2{font-size:clamp(1.45rem,5.6vw,2.1rem)!important;margin:10px 0!important;}
+ #os .os-dashboard p{font-size:.82rem!important;line-height:1.4!important;}
+ #os .dashboard-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;margin:13px 0 16px!important;}
+ #os .dashboard-stats>div{padding:9px 6px!important;gap:4px!important;}
+ #os .dashboard-stats strong{font-size:clamp(.95rem,4vw,1.3rem)!important;}
+ #os .dashboard-stats small{font-size:clamp(.49rem,1.7vw,.63rem)!important;letter-spacing:0!important;line-height:1.2!important;}
+ #os .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+ #os .quick-grid button{min-height:85px!important;padding:11px!important;}
+ #os .taskbar{min-height:46px!important;flex-basis:46px!important;height:46px!important;}
+ #os .taskbar #clock{display:none!important;}
+ #os .taskbar #start{padding:6px 9px!important;font-size:.75rem!important;}
+ #os #window-area>.window[data-window],#os #window-area>.window[data-window].is-maximized{top:calc(54px + env(safe-area-inset-top,0px))!important;bottom:calc(48px + env(safe-area-inset-bottom,0px))!important;}
+ #os .window[data-window] .window-content{overflow-x:hidden!important;}
+ #os .explorer-layout,#os .recognize-grid,#os .nl-layout,#os .demo-grid{grid-template-columns:minmax(0,1fr)!important;}
+ #os .explorer-detail,#os .explorer-list,#os .recognize-grid>*{min-width:0!important;}
+}
+@media(max-width:420px){
+ #os .os-wallpaper{padding-inline:9px!important;}
+ #os .desktop-icons{gap:5px!important;}
+ #os .desktop-icons button{min-height:62px!important;max-height:72px!important;font-size:clamp(9px,2.6vw,11px)!important;padding:6px 2px!important;}
+ #os .desktop-icons .app-glyph{width:25px!important;height:25px!important;}
+ #os .os-dashboard{padding:12px!important;}
+ #os .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+ #os .taskbar{height:46px!important;flex-basis:46px!important;}
+}
+@media(max-width:340px){#os .desktop-icons{grid-template-columns:repeat(2,minmax(0,1fr))!important;}#os .dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
