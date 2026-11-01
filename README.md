@@ -17,3 +17,10 @@ Upload **the contents** of this folder to the root of `cipherKay/kay-os-portfoli
 - No proprietary code or employer records are included.
 - Project windows are case-study summaries, not full software replicas.
 - Test homepage, Launch KAY OS, each app, Back to portfolio, and mobile layout after publishing.
+
+
+## v3.1 Project Explorer
+- Filter projects by automation, development or security.
+- Select a project to read challenge, implementation, outcome, and tech stack.
+- Open a separate detailed case-study window.
+- Public-safe summaries only; no internal organizational data.
