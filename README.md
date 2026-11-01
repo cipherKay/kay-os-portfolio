@@ -19,3 +19,6 @@ The recognition form has a Preview recognition button. The preview displays reci
 
 ## v3.8 — Teams-style recognition feed
 Approved public recognition submissions appear as polished cards on the Overview screen, with recipient initials, sender, recognition badge, message, points, and approval indicator. Private recognition does not appear in the public feed. All data and messaging are fictional browser-only simulations.
+
+## v3.9 layout update
+Larger responsive application windows, maximize/restore buttons, independent content scrolling, and improved Recognition App dashboard spacing. All demos use fictional data.
