@@ -99,3 +99,11 @@ Original top-down pixel-art facility map with ten numbered terminals, arrow/WASD
 
 ## v5.3 Newsroom newspaper + decoder
 The first Mission-X terminal now displays an original fictional rover newspaper and an interactive ROT13/rotation slider. Rotate `URYVB` by 13 positions to decode `HELIO`, then submit the word to advance. No external network calls or real NASA systems.
+
+
+## v5.5 — Story-driven town adventure
+- Starts in Agent NOVA's bedroom. Exit to a town map with roads connecting HOME, CAFE, PARK, and FACILITY.
+- Visit the cafe and solve the interactive newspaper cipher to receive the mission briefing.
+- The facility remains inaccessible until the cafe briefing is complete. A fictional security guard verifies the code before access to the ten training terminals.
+- Keyboard (WASD/arrows), mobile touch pad, INTERACT, and clickable town landmarks.
+- Everything is a fictional, local-only educational simulation.
