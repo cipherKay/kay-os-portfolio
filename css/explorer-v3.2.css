@@ -1,0 +1,14 @@
+/* KAY OS v3.2: Project Explorer repair and window ergonomics */
+#os .window[data-window="projects"]{width:min(980px,calc(100vw - 48px));left:50%!important;top:50%!important;transform:translate(-50%,-50%);max-height:min(82dvh,850px);display:flex;flex-direction:column;overflow:hidden}
+#os .window[data-window="projects"] .window-bar{flex:0 0 auto}
+#os .window[data-window="projects"] .window-content{min-height:0;overflow-y:auto;max-height:none;flex:1;padding:clamp(16px,2.5vw,30px)}
+#os .explorer-layout{display:grid;grid-template-columns:minmax(220px,.88fr) minmax(0,1.55fr);gap:18px;align-items:start}
+#os .explorer-list{display:grid;gap:10px;min-width:0}
+#os .explorer-item{appearance:none;display:flex;align-items:center;gap:12px;min-width:0;white-space:normal;line-height:1.35}
+#os .explorer-item span:nth-child(2){min-width:0;overflow-wrap:anywhere}
+#os .explorer-item b{flex-shrink:0}
+#os .explorer-detail{min-width:0;overflow-wrap:anywhere}
+#os .explorer-filters button{appearance:none;white-space:nowrap}
+#os .window[data-window="projects"] .explorer-open{appearance:none;display:inline-flex;align-items:center;white-space:normal;text-align:left}
+@media(max-width:760px){#os .window[data-window="projects"]{width:calc(100vw - 20px);max-height:calc(100dvh - 95px);top:48%!important}#os .explorer-layout{grid-template-columns:1fr}#os .explorer-detail{min-height:0}}
+@media(max-height:650px){#os .window[data-window="projects"]{max-height:calc(100dvh - 75px)}}
