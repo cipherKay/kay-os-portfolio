@@ -134,3 +134,6 @@ Park now has an interactive dog walker, jogger, and a hidden Star Fragment [ORBI
 
 ## v6.0 Project Cipher
 Inventory button for newspaper and Star Fragment collectibles; moving park NPCs; optional Easter egg puzzle (talk to both characters and find the Star Fragment). Fictional simulation.
+
+## v6.1 correction
+Corrected two visible version labels and hid mobile-only Project Explorer back navigation on desktop.
