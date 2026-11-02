@@ -20,3 +20,6 @@
  #os .window[data-window="projects"].explorer-show-detail .explorer-back{display:inline-flex;align-items:center;gap:8px}
  #os .window[data-window="projects"] .explorer-open{display:flex!important;justify-content:center!important;align-items:center!important;width:100%!important;min-height:48px!important;margin-top:18px!important;text-align:center!important}
 }
+
+/* Desktop: mobile back navigation must stay hidden */
+@media (min-width: 769px) { #os .window[data-window="projects"] .explorer-back { display: none !important; } }
