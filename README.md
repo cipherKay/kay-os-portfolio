@@ -1,3 +1,7 @@
+## Portfolio owner name update
+
+The portfolio owner is identified as **Kassandra Jaramillo** in the homepage, footer, About window, and terminal. The **KAY OS** product brand, **Project Cipher** game, and GitHub username `cipherKay` remain unchanged.
+
 # KAY OS v5.6 — Project Cipher
 
 The retro spy adventure is now called **Project Cipher** throughout the portfolio, including game menus, source identifiers, stylesheets, and documentation.
